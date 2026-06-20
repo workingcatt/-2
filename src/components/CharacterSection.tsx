@@ -113,25 +113,29 @@ export function CharacterSection() {
         </AnimatePresence>
 
         {/* Character Modal */}
-        <AnimatePresence>
-          {selectedCharacter && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(10px)' }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="bg-white border-2 border-pink-100 rounded-[3rem] w-full max-w-5xl max-h-[90vh] overflow-y-auto custom-scrollbar flex flex-col lg:flex-row relative shadow-[0_30px_60px_rgba(255,182,193,0.5)]"
-              >
-                <button 
-                  onClick={() => setSelectedCharacter(null)}
-                  className="absolute top-6 right-6 p-2 bg-gray-100 hover:bg-pink-100 text-gray-500 hover:text-pink-600 rounded-full transition-colors z-50"
-                >
-                  <X size={24} />
-                </button>
+      </div>
 
+      <AnimatePresence>
+        {selectedCharacter && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6" style={{ background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(10px)' }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="w-full max-w-5xl relative flex flex-col mt-4 md:mt-0"
+            >
+              {/* Floating Close Button for both Mobile and Desktop */}
+              <button 
+                onClick={() => setSelectedCharacter(null)}
+                className="absolute -top-12 right-0 md:top-6 md:-right-16 p-2.5 md:p-3 bg-white border border-pink-200 hover:bg-pink-50 text-gray-500 hover:text-pink-600 rounded-full transition-all z-[110] shadow-[0_4px_10px_rgba(255,182,193,0.4)]"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="bg-white border-2 border-pink-100 rounded-[2rem] sm:rounded-[3rem] w-full max-h-[85vh] overflow-y-auto custom-scrollbar flex flex-col lg:flex-row relative shadow-[0_30px_60px_rgba(255,182,193,0.5)]">
                 {/* Left Side: Big Image Area */}
-                <div className="w-full lg:w-5/12 bg-pink-50 flex flex-col items-center justify-center p-8 relative border-b lg:border-b-0 lg:border-r border-pink-100">
-                  <div className="relative w-full aspect-[3/4] flex items-center justify-center mb-6">
+                <div className="w-full lg:w-5/12 bg-pink-50 flex flex-col items-center justify-center p-8 pt-8 lg:pt-8 md:p-8 relative border-b lg:border-b-0 lg:border-r border-pink-100 min-h-[300px]">
+                    <div className="relative w-full aspect-[3/4] flex items-center justify-center mb-6">
                     {/* Magical background ring */}
                     <motion.div 
                       animate={{ rotate: 360 }} 
@@ -243,11 +247,11 @@ export function CharacterSection() {
                     </div>
                   </div>
                 </div>
+                </div>
               </motion.div>
             </div>
           )}
         </AnimatePresence>
-      </div>
     </section>
   );
 }

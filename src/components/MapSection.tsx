@@ -6,12 +6,13 @@ import { MapPin, Sparkles } from "lucide-react";
 export function MapSection() {
   const [selectedMap, setSelectedMap] = useState<number | null>(null);
 
-  // Generate pseudo-random coordinates for the 19 locations on a tech/magic grid
+  // Generate pseudo-random coordinates for the 12 locations on a tech/magic grid
   const nodePositions = [
     { top: '30%', left: '40%' }, { top: '35%', left: '46%' }, { top: '25%', left: '35%' }, { top: '30%', left: '50%' }, // City
     { top: '50%', left: '25%' }, { top: '55%', left: '30%' }, { top: '45%', left: '20%' }, { top: '50%', left: '35%' }, // Lumiere
     { top: '70%', left: '70%' }, // Pandora
-    { top: '80%', left: '40%' } // Maleas
+    { top: '80%', left: '40%' }, // Maleas
+    { top: '65%', left: '80%' }, { top: '60%', left: '85%' } // Association
   ];
 
   const handleSelect = (id: number) => {

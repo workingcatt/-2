@@ -15,6 +15,7 @@ export const FACTION_INFO = [
   { name: "불량아들", desc: "엄격하고 획일화된 루미에르의 방침에 반발하여 등교를 거부하고 자신만의 방식을 추구하는 이탈자 집단입니다. 진짜 악의를 품은 빌런들과는 성격이 다르나, 억눌린 불만으로 인해 언제든 마녀로 폭주할 위험이 있는 위태로운 경계선에 머물러 있습니다." },
   { name: "판도라", desc: "도시의 치안 시스템을 정면으로 부정하고 자신들의 초월적인 도구와 마력을 쾌락이나 사욕을 위해 남용하는 마법 빌런 연합집단입니다. 표면적으로는 '세계 정복'을 외치지만, 사실상 사회의 차별과 혐오가 응집하여 탄생한 반항아들의 모임에 가깝습니다." },
   { name: "태초의 마녀들", desc: "모든 재앙의 시발점인 '시작의 공진' 당시부터 존재했던 네 명의 근원적 마녀들. 괴물이라는 껍데기를 넘어 완벽한 인간의 형태와 자아를 구축한 이들은 현재 엄청난 힘을 숨긴 채, 인간 사회의 일상에 스며들어 관찰자로서 숨어 지내고 있습니다." },
+  { name: "마법소녀 협회", desc: "마법소녀지원협회/루미에르학원관리/마법소녀지원/정부와갈등/기본적으로마법소녀들이아닌전투력이높은일반인들" },
   { name: "기타 (무소속)", desc: "어느 거대 세력의 규칙이나 질서에도 구속되지 않는 철저한 방랑자 및 관찰자들. 잃어버린 기억을 쫓거나 도시의 이면에서 자신만의 조용한 사투를 벌이고 있으며, 이들의 존재는 이야기의 중요한 전환점이 되기도 합니다." }
 ];
 
@@ -28,7 +29,9 @@ export const MAP_LOCATIONS: MapLocation[] = [
   { id: 7, name: "루미에르 학원 (밤)", desc: "학생들이 대부분 기숙사로 돌아가 정적만이 감도는 학원 전경. 학원의 감춰진 실체나 학생회, 선도부의 심야 비밀 작전 회의가 진행되곤 한다." },
   { id: 8, name: "루미에르 교실 (밤)", desc: "조용히 가라앉은 분위기의 텅 빈 교실. 은밀한 거래나, 개인적인 갈등, 누군가의 무거운 스토리가 전개되는 짙은 감정의 장소." },
   { id: 9, name: "판도라 거점", desc: "루미에르를 거부하며 힘을 남용하는 빌런 집단 '판도라'의 본거지. 도시 지하 어딘가 깊은 곳에 존재하며, 내부는 거대한 흑마법 성당같이 생겨 웅장하고 압도적인 분위기를 뿜는다." },
-  { id: 10, name: "공진 구역 (말레아스)", desc: "도시 어딘가에서 터져나오는 재앙의 시발점인 '공진'. 마력 수용에 실패해 이성을 잃은 괴물 마녀 '말레아스'의 거점이다." }
+  { id: 10, name: "공진 구역 (말레아스)", desc: "도시 어딘가에서 터져나오는 재앙의 시발점인 '공진'. 마력 수용에 실패해 이성을 잃은 괴물 마녀 '말레아스'의 거점이다." },
+  { id: 20, name: "마법소녀 협회 (외부)", desc: "해당 장소의 이야기가 아직 밝혀지지 않았습니다." },
+  { id: 21, name: "마법소녀 협회 (내부)", desc: "해당 장소의 이야기가 아직 밝혀지지 않았습니다." }
 ];
 
 export const FACTIONS: Faction[] = [
@@ -116,7 +119,7 @@ export const FACTIONS: Faction[] = [
     name: "판도라",
     characters: [
       { name: "유소아", gender: "여", age: 18, originalHair: "보라빛 은발 장발", transformHair: "보라빛 은발 장발", eyes: "붉은", casualOutfit: "하얀셔츠+검보라드레스", transformOutfit: "검보라제복+제복코트+제복모자", personality: "능글, 허당, 위엄있어 보려함, 은근 소심, 엉뚱", feature: "판도라 수장 / 수장이지만 소심 / 바보", ability: "야망", code: "JK" },
-      { name: "이지율", gender: "여", age: 16, originalHair: "연노랑 아래로 길게 땋은 머리", transformHair: "연노랑 단발", eyes: "?", casualOutfit: "고양이털모자+연노랑후드티", transformOutfit: "노랑점퍼+하네스+고글+여우귀+무장가방", personality: "나른, 맹함, 귀여움, 4차원, 로망적", feature: "판도라 막내 / 로망계 능력 전부 사용 가능하나 텍티컬만 사용 중", ability: "?", code: "KL" },
+      { name: "이지율", gender: "여", age: 16, originalHair: "연노랑 아래로 길게 땋은 머리", transformHair: "연노랑 단발", eyes: "회색", casualOutfit: "고양이털모자+연노랑후드티", transformOutfit: "노랑점퍼+하네스+고글+여우귀+무장가방", personality: "나른, 맹함, 귀여움, 4차원, 로망적", feature: "판도라 막내 / 로망계 능력 전부 사용 가능하나 텍티컬만 사용 중", ability: "로망", code: "KL" },
       { name: "이예슬", gender: "여", age: 17, originalHair: "백발+무지개브릿지 낮은 포니테일", transformHair: "무지개색 단발", eyes: "주황(별모양 동공)", casualOutfit: "멜빵바지+하얀셔츠+하얀카디건+검은빵모자", transformOutfit: "하얀모자+하얀셔츠+스커트+하얀자켓+거대한붓", personality: "천진난만, 명랑, 밝음, 산만, 확신적, 예술적", feature: "예술적 감각", ability: "예술", code: "LM" },
       { name: "미지수", gender: "여", age: 18, originalHair: "진한 붉은 트윈테일", transformHair: "진한 붉은 단발", eyes: "붉은", casualOutfit: "하얀가운+검은스커트+검은목도리", transformOutfit: "고양이귀하얀후드코트+하얀셔츠+모애소매+플라스크병벨트", personality: "고혹적, 탐구적, 분석적, 흥미, 약간 광기", feature: "판도라의 두뇌 / 흥미로운 것 매우 좋아함", ability: "탐구", code: "MN" },
       { name: "유체린", gender: "여", age: 17, originalHair: "베이지색 사이드 포니테일", transformHair: "베이지색 장발", eyes: "분홍", casualOutfit: "검은브라탑+하얀자켓+베이지색핫팬츠", transformOutfit: "검은오프숄더드레스+검은빵모자+머리에검은장미", personality: "쾌락적, 활발, 장난기, 충동적, 대범함, 욕망", feature: "유소아 절친 / 유소아 챙김 / 하고싶은건 다 함 / 학원 우등생", ability: "욕망", code: "QP" },
@@ -132,6 +135,16 @@ export const FACTIONS: Faction[] = [
       { name: "주시아", gender: "여", age: "???", originalHair: "검은 트윈테일", transformHair: "-", eyes: "붉은", casualOutfit: "붉은드레스+검은소매+구속복드레스", transformOutfit: "-", personality: "광기, 능글, 활발, 쾌락주의, 장난기, 교활", feature: "초대 마녀 둘째 / 도파민 중독자 / 도박소·유흥가 생활", ability: "구속", code: "GH" },
       { name: "이유슬", gender: "여", age: "???", originalHair: "하늘색 분홍 반반 장발", transformHair: "-", eyes: "분홍", casualOutfit: "하얀튜브탑후드+하얀자켓+검은핫팬츠+헤드셋", transformOutfit: "-", personality: "소심, 은근 뻔뻔, 허접, 허당, 우쭐", feature: "초대 마녀 셋째 / 히키코모리 / 게임 랭커 / 서주아 애정", ability: "외면", code: "HI" },
       { name: "서주아", gender: "여", age: "???", originalHair: "은발 단발", transformHair: "-", eyes: "하얀", casualOutfit: "하얀셔츠+검은프릴스커트+검은하얀프릴소매+어깨장갑", transformOutfit: "-", personality: "무뚝뚝, 신비, 차분, 호기심, 맹함", feature: "초대 마녀 넷째(막내) / 야행성 / 미식거리 탐방", ability: "반전", code: "EF" },
+    ]
+  },
+  {
+    id: "association",
+    name: "마법소녀 협회",
+    characters: [
+      { name: "유성화", gender: "여", age: 21, originalHair: "흑발 낮은 포니테일", transformHair: "-", eyes: "청안", casualOutfit: "검은색정장+검은색스커트+ID카드", transformOutfit: "-", personality: "나른, 체계적, 계획적, 무뚝뚝, 이성적", feature: "마법소녀협회장 / 어릴적마법소녀에게구해짐 / 마법소녀극성팬", ability: "이성의 관리요원(권총술+총술)", code: "ST" },
+      { name: "체미루", gender: "여", age: 20, originalHair: "라벤더 장발", transformHair: "-", eyes: "녹색", casualOutfit: "하얀색셔츠+검은색자켓+검은색스커트+ID카드", transformOutfit: "-", personality: "메스가키, 능글, 유능, 장난스러움, 땡땡이", feature: "유성화의비서 / 땡땡이가많아도유능", ability: "지속의 관리요원(해킹/전자전)", code: "UV" },
+      { name: "체이선", gender: "여", age: 16, originalHair: "짙은회색 단발", transformHair: "-", eyes: "주황색", casualOutfit: "회색코트+하얀색셔츠+하늘색넥타이+ID카드+주황색목도리+빵모자", transformOutfit: "-", personality: "무뚝뚝, 맹함, 나른함, 객관적, 4차원", feature: "체유선의언니 / 어릴적마녀에게부모잃음 / 객관적판단", ability: "객관의 관리요원(거대망치사용)", code: "VW" },
+      { name: "체유선", gender: "여", age: 15, originalHair: "짙은회색 장발", transformHair: "-", eyes: "주황색", casualOutfit: "검은색자켓+주황색목도리+검은색머리띠+ID카드", transformOutfit: "-", personality: "쿠소가키, 츤데레, 싸늘, 주관적, 까칠", feature: "체이선의동생 / 어릴적마녀에게부모잃음 / 마법소녀싫어함 / 정부더싫어함 / 주관적판단", ability: "주관의 관리요원(거대망치사용)", code: "WX" },
     ]
   }
 ]
